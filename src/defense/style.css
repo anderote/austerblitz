@@ -1,0 +1,297 @@
+:root {
+  font:
+    14px/1.4 ui-monospace,
+    Menlo,
+    monospace;
+  color: #eae6d4;
+  background: #131911;
+  color-scheme: dark;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: radial-gradient(ellipse at 20% 0, #2a3023, transparent 65%);
+  min-height: 100vh;
+}
+main {
+  max-width: 1500px;
+  margin: auto;
+  padding: clamp(16px, 3vw, 46px);
+}
+header,
+.resources,
+.strip,
+.wavehead,
+.orders,
+.mapfoot,
+nav {
+  display: flex;
+  align-items: center;
+}
+header {
+  justify-content: space-between;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #62664d;
+  padding-bottom: 18px;
+}
+header a {
+  color: #c8c8ac;
+  text-decoration: none;
+  font-size: 12px;
+}
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+h1,
+h2,
+h3 {
+  font-family: Georgia, serif;
+}
+h1 {
+  font-size: clamp(35px, 4vw, 59px);
+  letter-spacing: -0.045em;
+  line-height: 1.1;
+}
+h2 {
+  font-size: 28px;
+}
+h3 {
+  font-size: 23px;
+}
+.resources > div {
+  border-left: 1px solid #545a44;
+  padding: 0 clamp(8px, 2vw, 30px);
+  color: #b9bea5;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+.resources strong {
+  display: block;
+  color: #eee9ce;
+  font-size: 25px;
+}
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 286px;
+  gap: 18px;
+  align-items: start;
+}
+.theater,
+aside {
+  border: 1px solid #545b45;
+  background: #20261c;
+}
+.strip,
+.mapfoot,
+.wavehead {
+  justify-content: space-between;
+}
+.strip,
+.mapfoot {
+  padding: 10px 14px;
+  font-size: 11px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+.strip strong {
+  color: #f2dfaa;
+}
+.mapfoot {
+  font-size: 10px;
+  color: #b8bca2;
+  border-bottom: 1px solid #505741;
+}
+.map {
+  position: relative;
+}
+.map canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  image-rendering: pixelated;
+}
+.marker {
+  position: absolute;
+  transform: translate(-50%, -72%);
+  width: 6.8%;
+  height: 9.8%;
+  background: transparent !important;
+  border: 0;
+  padding: 0;
+}
+.marker span {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #242b1fdd;
+  color: #e6e1c7;
+  font: 10px monospace;
+  padding: 1px 4px;
+}
+.marker[aria-pressed='true'] span {
+  background: #e0c68a;
+  color: #21251a;
+}
+button {
+  cursor: pointer;
+  color: inherit;
+  background: #303829;
+  border: 1px solid #646c53;
+  font: inherit;
+  padding: 8px 10px;
+}
+button:hover:enabled,
+button:focus-visible {
+  border-color: #e6cd8b;
+  background: #434b34;
+}
+button:disabled {
+  opacity: 0.43;
+  cursor: default;
+}
+.dispatch,
+#panel {
+  padding: 18px;
+}
+.dispatch p,
+#panel p,
+.muted {
+  color: #bdc2ad;
+}
+.dispatch p {
+  margin: 7px 0 14px;
+}
+.orders {
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.orders button {
+  font-size: 12px;
+}
+.orders .primary {
+  background: #e1c788;
+  color: #25261a;
+  border-color: #e1c788;
+  font-weight: bold;
+}
+.wavehead strong {
+  font-size: 12px;
+  color: #d9c38a;
+}
+#progress {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+#progress i {
+  height: 4px;
+  background: #454d39;
+  flex: 1;
+}
+#progress .done {
+  background: #a8b57f;
+}
+#progress .active {
+  background: #dbbd77;
+}
+nav button {
+  width: 50%;
+  border: 0;
+  border-bottom: 2px solid #535a43;
+}
+nav [aria-selected='true'] {
+  color: #f1d592;
+  border-color: #d3b677;
+  background: #343b2b;
+}
+#panel > p {
+  font-size: 12px;
+  margin: 5px 0 13px;
+}
+.choice {
+  width: 100%;
+  display: block;
+  text-align: left;
+  margin: 8px 0;
+  background: #293123;
+  padding: 11px;
+}
+.choice b {
+  display: flex;
+  justify-content: space-between;
+}
+.choice small {
+  display: block;
+  color: #c1c6af;
+  margin-top: 4px;
+}
+.choice em {
+  font-style: normal;
+  color: #e1c788;
+  font-size: 12px;
+}
+dl {
+  margin: 12px 0 16px;
+}
+dl div {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #444c39;
+  padding: 5px 0;
+}
+dt {
+  color: #bdc2ad;
+}
+dd {
+  margin: 0;
+}
+.note {
+  color: #d2bd83;
+  font-size: 11px;
+}
+#restart {
+  margin-left: auto;
+  background: transparent;
+}
+@media (max-width: 850px) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr) 235px;
+    gap: 8px;
+  }
+  main {
+    padding: 12px;
+  }
+  .dispatch,
+  #panel {
+    padding: 12px;
+  }
+}
+@media (max-width: 690px) {
+  .layout {
+    display: block;
+  }
+  aside {
+    margin-top: 10px;
+  }
+  header {
+    margin-bottom: 10px;
+  }
+  .resources strong {
+    font-size: 19px;
+  }
+  .resources > div {
+    font-size: 9px;
+  }
+  .orders button {
+    padding: 7px;
+  }
+  .marker span {
+    font-size: 8px;
+  }
+}

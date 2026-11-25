@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Dead March · Austerblitz</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div>
+          <a href="./">← Austerblitz</a>
+          <h1>Dead March</h1>
+        </div>
+        <div class="resources">
+          <div>Gate<strong id="gate"></strong></div>
+          <div>Supplies<strong id="stores"></strong></div>
+          <div>Research<strong id="intel"></strong></div>
+        </div>
+      </header>
+      <section class="layout">
+        <div class="theater">
+          <div class="strip">
+            <strong>Fort Vesper</strong><span id="phase"></span>
+          </div>
+          <div class="map">
+            <canvas
+              width="850"
+              height="460"
+              aria-label="Battlefield showing the horde route from the eastern woods to Fort Vesper"
+            ></canvas>
+            <div id="markers"></div>
+          </div>
+          <div class="mapfoot">
+            <span>West gate</span><span>Eastern approach ←</span>
+          </div>
+          <section class="dispatch">
+            <div class="wavehead">
+              <h2 id="wave"></h2>
+              <strong id="remaining"></strong>
+            </div>
+            <p id="brief"></p>
+            <div id="progress"></div>
+            <div class="orders">
+              <button id="start" class="primary">Send wave</button
+              ><button id="speed">Speed ×1</button
+              ><button id="pause">Pause</button
+              ><button id="restart">New campaign</button>
+            </div>
+          </section>
+        </div>
+        <aside>
+          <nav>
+            <button id="postTab">Emplacement</button
+            ><button id="techTab">Research</button>
+          </nav>
+          <div id="panel"></div>
+        </aside>
+      </section>
+    </main>
+    <script type="module" src="/src/defense/main.ts"></script>
+  </body>
+</html>

@@ -419,6 +419,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         lineBattles: resolve(__dirname, 'line-battles.html'),
+        defense: resolve(__dirname, 'defense.html'),
         skirmish: resolve(__dirname, 'skirmish.html'),
         lab: resolve(__dirname, 'lab.html'),
         components: resolve(__dirname, 'components.html'),
