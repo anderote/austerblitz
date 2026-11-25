@@ -1,0 +1,9 @@
+.git
+.worktrees
+.superpowers
+.claude
+node_modules
+dist
+coverage
+memory
+docs
